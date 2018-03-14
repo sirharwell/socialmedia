@@ -15,17 +15,9 @@ ActiveRecord::Schema.define(version: 20170920015349) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  name: Faker::GameOfThrones.character,
-  house: Faker::GameOfThrones.house,
-  city: Faker::GameOfThrones.city,
-  pic: Faker::LoremPixel.image,
-  age: Faker::Number.number(2)
-  height: Faker::Demographic.height(:imperial),
-
-  create_table "dudes", force: :cascade do |t|
+  create_table "apps", force: :cascade do |t|
     t.string "name"
-    t.text "house"
-    t.string "city"
+    t.text "city"
     t.text "pic"
     t.float "age"
     t.text "height"
